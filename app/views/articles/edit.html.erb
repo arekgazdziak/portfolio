@@ -1,0 +1,17 @@
+<div class="notice"><%= flash[:notice] %></div>
+<p>
+<div>
+<%= tinymce_assets %>
+<%= tinymce %>
+<%= form_for :article, url: @article, method: :patch, html: { class: "pure-form" } do |f| %>
+  <p>
+    <%= f.text_field :title, class: "title", :maxlength => 50 %>
+  </p>
+  <p>
+    <%= f.text_area :text, class: "tinymce", :cols => 40, :rows => 25 %>
+  </p>
+    <%= f.submit :class => "button-success button-secondary pure-button pure-button-primary" %>
+<% end %>
+</div>
+
+</p>

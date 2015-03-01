@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.2.0/base-min.css&pure/0.2.0/grids-min.css&pure/0.2.0/forms-min.css&pure/0.2.0/buttons-min.css&pure/0.2.0/menus-min.css&pure/0.2.0/tables-min.css">
+  <title><%= @title %> | Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+
+</head>
+<body>
+	<div class="pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+		<a href="/" class="pure-menu-heading">Blog</a>
+		<ul>
+			<li><a href="/" data-no-turbolink='true' >Latest</a></li>
+			<li><a href="/articles" data-no-turbolink='true'>Articles</a></li>
+			<li><a href="/articles/new" data-no-turbolink='true' >New article</a></li>
+      <li><a href="#" data-no-turbolink='true' >Portfolio</a></li>
+    </ul>
+  </div>
+  <div class="text_margin">
+
+  <%= yield %>
+
+  </div>
+</body>
+</html>

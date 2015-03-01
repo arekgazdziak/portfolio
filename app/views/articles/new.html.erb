@@ -1,0 +1,15 @@
+
+<div class="alert alert-success"><%= flash[:notice] %></div>
+<div>
+<%= tinymce_assets %>
+<%= tinymce %>
+<%= form_for :article, url: articles_path, html: { class: "pure-form" } do |f| %>
+  <p>
+    <%= f.text_field :title, class: "title", :maxlength => 50, :placeholder => "Title" %>
+  </p>
+  <p>
+    <%= f.text_area :text, :class => "tinymce", :placeholder => "Text", :cols => 40, :rows => 25  %>
+  </p>
+    <%= f.submit :class => "button-success button-secondary pure-button pure-button-primary" %>
+<% end %>
+</div>
