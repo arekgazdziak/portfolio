@@ -3,7 +3,7 @@
 <h2 align="center"><strong><%= @article.title.html_safe %></strong></h2>
 <p><%= @article.text.html_safe %></p>
 
-<% end %>
+
 <%= tinymce_assets %>
 <%= tinymce %>
 <hr class="hr_settings "/>
@@ -32,4 +32,5 @@
   <p><%= f.text_area :body, class: "tinymce", :placeholder => "Comment" %></p>
   </div>
   <%= f.submit class: "button-success button-secondary pure-button pure-button-primary" %>
+<% end %>
 <% end %>
