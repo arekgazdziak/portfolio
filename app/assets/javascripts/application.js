@@ -16,8 +16,8 @@
 //= require_tree .
 //= require tinymce-jquery
 
-$(document).on 'page:receive', ->
-  tinymce.remove()
+// $(document).on 'page:receive', ->
+//   tinymce.remove()
 
 // $(document).on 'page:ready', ->
 //   tinyMCE.init({
