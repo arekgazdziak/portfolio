@@ -81,12 +81,9 @@ float: left;
 .notice { background-color: black;
         color: white;	        
         font-weight: bold;
-        display: block;
         width: 250px;
-        float: left;
         text-align: center;
         font-family: 'PT Sans';
-        margin-bottom: 20px;
 }
 
 label:after {content: ":";}
