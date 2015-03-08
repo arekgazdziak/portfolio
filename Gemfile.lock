@@ -64,6 +64,12 @@ GEM
     formatador (0.2.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
+    google-authenticator-rails (1.0.0)
+      actionpack
+      activerecord
+      google-qr
+      rotp (= 1.6.1)
+    google-qr (0.2.2)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -154,6 +160,7 @@ GEM
     rb-readline (0.5.1)
     rdoc (4.2.0)
       json (~> 1.4)
+    rotp (1.6.1)
     ruby-progressbar (1.6.0)
     sass (3.4.12)
     sass-rails (5.0.1)
@@ -208,6 +215,7 @@ DEPENDENCIES
   arel
   byebug
   coffee-rails (~> 4.0.0)
+  google-authenticator-rails
   guard-minitest (= 2.3.1)
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0.0.beta2)
