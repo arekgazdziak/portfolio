@@ -1,5 +1,5 @@
 <% if @article != nil %>
-
+<div class="notice"><%= flash[:notice] %></div>
 <h1 align="center"><strong><%= @article.title.html_safe %></strong></h1>
 <p><%= @article.text.html_safe %></p>
 
