@@ -1,7 +1,7 @@
 <div class="notice"><%= flash[:notice] %></div>
 
 <div>
-  <h1 align="center"><strong><%= @article.title.html_safe %></strong></h1>
+  <h1 align="center"><%= @article.title.html_safe %></h1>
 
   <p><%= @article.text.gsub(/font-family: [^;]*;/,"font-family: 'PT Sans', sans-serif;").html_safe  %></p>
 </div>
