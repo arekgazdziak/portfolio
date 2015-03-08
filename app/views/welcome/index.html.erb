@@ -1,7 +1,7 @@
 <% if @article != nil %>
 <div class="notice"><%= flash[:notice] %></div>
 <h1 align="center"><strong><%= @article.title.html_safe %></strong></h1>
-<p><%= @article.text.html_safe %></p>
+<p><%= @article.text.gsub(/font-family: [^;]*;/,"font-family: 'PT Sans', sans-serif;").html_safe %></p>
 
 
 <%= tinymce_assets %>
