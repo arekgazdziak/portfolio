@@ -28,7 +28,12 @@ gem 'arel'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'tinymce-rails'
 
-gem 'google-authenticator-rails'
+# Google auth
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'hashie'
+gem 'therubyracer'
+gem 'devise'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

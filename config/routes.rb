@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'users/new'
-
-  get 'users/show'
-
-  get 'users/login'
-
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks"}
   resources :articles do
     resources :comments
   end
