@@ -86,6 +86,10 @@ float: left;
         font-family: 'PT Sans';
 }
 
+body {
+	    width: 1200px;
+}
+
 label:after {content: ":";}
 
 input.title {width: 500px;}
