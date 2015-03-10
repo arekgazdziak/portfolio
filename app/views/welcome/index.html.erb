@@ -7,8 +7,9 @@
 <%= tinymce_assets %>
 <%= tinymce %>
 <hr class="hr_settings "/>
-<h3>Comments:</h2>
+
 <% if @article.comments.any? %>
+<h3>Comments:</h2>
 <div><% @article.comments.each do |comment| %>
   <strong>Commenter</strong>
   <p><%= comment.commenter %></p>
@@ -20,6 +21,7 @@
 <div>
 <% end %>
 
+<% if user_signed_in? %>
 <h4>Add a comment:</h3>
 
 <%= form_for [@article, @article.comments.build], html: { class: "pure-form" } do |f| %>
@@ -32,5 +34,6 @@
   <p><%= f.text_area :body, class: "tinymce", :placeholder => "Comment" %></p>
   </div>
   <%= f.submit class: "button-success button-secondary pure-button pure-button-primary" %>
+<% end %>
 <% end %>
 <% end %>

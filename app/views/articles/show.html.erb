@@ -8,8 +8,9 @@
 <%= tinymce_assets %>
 <%= tinymce %>
 <hr class="hr_settings "/>
-<h3>Comments:</h3>
+
 <% if @article.comments.any? %>
+<h3>Comments:</h3>
 <div><% @article.comments.each do |comment| %>
   <strong>Commenter</strong>
   <p><%= comment.commenter %></p>
@@ -21,7 +22,7 @@
 <div>
 <% end %>
 
-
+<% if user_signed_in? %>
 <h4>Add a comment:</h3>
 
 <%= form_for [@article, @article.comments.build], html: { class: "pure-form" } do |f| %>
@@ -35,4 +36,4 @@
   </div>
   <%= f.submit class: "button-success button-secondary pure-button pure-button-primary" %>
 <% end %>
-
+<% end %>

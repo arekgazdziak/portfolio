@@ -15,7 +15,7 @@
 		<ul>
 			<li><a href="/" data-no-turbolink='true' >Latest</a></li>
 			<li><a href="/articles" data-no-turbolink='true'>Articles</a></li>
-			<% if user_signed_in? %>
+			<% if current_user.try(:admin?) %>
       <li><a href="/articles/new" data-no-turbolink='true' >New article</a></li>
       <% end %>
       <li><a href="#" data-no-turbolink='true' >Portfolio</a></li>

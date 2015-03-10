@@ -1,12 +1,12 @@
 class ArticlesController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :ensure_admin!, :except => [:index, :show]
   def index
     @title = "Articles"
     @articles = Article.all.order('created_at DESC')
   end
 
   def new
-
     @title = "New Article"
   end
 
@@ -53,6 +53,13 @@ class ArticlesController < ApplicationController
 
 
   private
+
+    def ensure_admin!
+      unless current_user.try(:admin?)
+        redirect_to root_path
+        false
+      end
+    end
 
     def params_helper
       params.require(:article).permit(:title, :text)      
