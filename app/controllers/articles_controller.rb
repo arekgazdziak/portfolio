@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
-  
+  before_filter :authenticate_user!, :except => [:index, :show]
   def index
     @title = "Articles"
     @articles = Article.all.order('created_at DESC')
   end
 
   def new
+
     @title = "New Article"
   end
 

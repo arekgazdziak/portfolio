@@ -1,9 +1,11 @@
 <p>
-<table class="pure-table" >
+<table class="pure-table" align="center" >
       <tr>
         <td></td>
+        <% if user_signed_in? %>
         <td></td>
         <td></td>
+        <% end %>
 	  </tr>
     <% @articles.each do |article| %>
     <tr>
@@ -14,8 +16,10 @@
     <td><%= strip_tags(article.text) %></td>
     <% end %> -->
     <td><%= link_to "#{article.title}", article, :"data-no-turbolink" => true  %></td>
-    <td><%= link_to "Edit", edit_article_path(article), :"data-no-turbolink" => true  %></td>
-    <td><%= link_to "Delete", article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% if user_signed_in? %>
+        <td><%= link_to "Edit", edit_article_path(article), :"data-no-turbolink" => true  %></td>
+        <td><%= link_to "Delete", article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
     </tr>
     <% end %>
 </table>
