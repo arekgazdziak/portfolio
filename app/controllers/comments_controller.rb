@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  
+  before_filter :ensure_admin!, only: [:destroy, :edit] 
   def edit
 
   end
@@ -24,6 +24,13 @@ class CommentsController < ApplicationController
   end
 
   private
+
+    def ensure_admin!
+      unless current_user.try(:admin?)
+        redirect_to root_path
+        false
+      end
+    end
 
   def params_helper
     params.require(:comment).permit(:commenter, :body)

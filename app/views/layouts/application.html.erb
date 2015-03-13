@@ -23,7 +23,7 @@
       <li><a href="/users/auth/google_oauth2" data-no-turbolink='true' >Log in</a></li>
       <!-- <li><a href="#" data-no-turbolink='true' >Edyta</a></li> -->
       <% else %>
-      <li><a href="#" data-no-turbolink='true' >Log out</a></li>
+      <li><%= link_to "Log out", destroy_user_session_path, :method => :delete, data_no_trubolink: true %></li>
       <li>Hi, <%= current_user.email %>!</li>
       <% end %>
     </ul>

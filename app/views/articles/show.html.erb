@@ -1,7 +1,5 @@
 <div class="notice"><%= flash[:notice] %></div>
-
-
-  <h1 align="center"><%= @article.title.html_safe %></h1>
+<h1 align="center"><%= @article.title.html_safe %></h1>
 <div>
   <p><%= @article.text.gsub(/font-family: [^;]*;/,"font-family: 'PT Sans', sans-serif;").html_safe  %></p>
 </div>
@@ -16,7 +14,9 @@
   <p><%= comment.commenter %></p>
   <strong>Comment</strong>
   <p><%= comment.body.html_safe %></p>
-  <p><%= link_to 'Delete', [comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'} %></p>
+  <% if current_user.try(:admin?) %>
+    <p><%= link_to 'Delete', [comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'} %></p>
+  <% end %>
   <hr class="hr_settings "/>
   <% end %> 
 <div>

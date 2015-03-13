@@ -1,40 +1,39 @@
 <% if @article != nil %>
-<div class="notice"><%= flash[:notice] %></div>
-<h1 align="center"><%= @article.title.html_safe %></h1>
-<div>
-<p><%= @article.text.gsub(/font-family: [^;]*;/,"font-family: 'PT Sans', sans-serif;").html_safe %></p>
-</div>
+  <div class="notice"><%= flash[:notice] %></div>
+  <h1 align="center"><%= @article.title.html_safe %></h1>
+  <div>
+    <p><%= @article.text.gsub(/font-family: [^;]*;/,"font-family: 'PT Sans', sans-serif;").html_safe %></p>
+  </div>
 
-<%= tinymce_assets %>
-<%= tinymce %>
-<hr class="hr_settings "/>
-
-<% if @article.comments.any? %>
-<h3>Comments:</h2>
-<div><% @article.comments.each do |comment| %>
-  <strong>Commenter</strong>
-  <p><%= comment.commenter %></p>
-  <strong>Comment</strong>
-  <p><%= comment.body.html_safe %></p>
-  <p><%= link_to 'Delete', [comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'} %></p>
+  <%= tinymce_assets %>
+  <%= tinymce %>
   <hr class="hr_settings "/>
-  <% end %> 
-<div>
-<% end %>
 
-<% if user_signed_in? %>
-<h4>Add a comment:</h3>
+  <% if @article.comments.any? %>
+    <h3>Comments:</h2>
+    <div><% @article.comments.each do |comment| %>
+      <strong>Commenter</strong>
+      <p><%= comment.commenter %></p>
+      <strong>Comment</strong>
+      <p><%= comment.body.html_safe %></p>
+      <% if current_user.try(:admin?) %>
+        <p><%= link_to 'Delete', [comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'} %></p>
+      <% end %>
+      <hr class="hr_settings "/>
+    <% end %> 
+  <% end %>
 
-<%= form_for [@article, @article.comments.build], html: { class: "pure-form" } do |f| %>
-  <div class="field">
+  <% if user_signed_in? %>
+    <h4>Add a comment:</h3>
 
-  <p><%= f.text_field :commenter, value: current_user.email, readonly: true %></p>
-  </div>
-  <div class="field">
-
-  <p><%= f.text_area :body, class: "tinymce", :placeholder => "Comment" %></p>
-  </div>
-  <%= f.submit class: "button-success button-secondary pure-button pure-button-primary" %>
-<% end %>
-<% end %>
+    <%= form_for [@article, @article.comments.build], html: { class: "pure-form" } do |f| %>
+      <div class="field">
+        <p><%= f.text_field :commenter, value: current_user.email, readonly: true %></p>
+      </div>
+      <div class="field">
+        <p><%= f.text_area :body, class: "tinymce", :placeholder => "Comment" %></p>
+      </div>
+      <%= f.submit class: "button-success button-secondary pure-button pure-button-primary" %>
+    <% end %>
+  <% end %>
 <% end %>
