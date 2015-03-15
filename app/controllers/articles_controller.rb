@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
+
   before_filter :authenticate_user!, :except => [:index, :show]
   before_filter :ensure_admin!, :except => [:index, :show]
+
   def index
     @title = "Articles"
     @articles = Article.all.order('created_at DESC')
@@ -49,8 +51,6 @@ class ArticlesController < ApplicationController
       redirect_to edit_article_path(@article)
     end
   end
-
-
 
   private
 

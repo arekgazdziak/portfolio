@@ -4,11 +4,9 @@
   <div>
     <p><%= @article.text.gsub(/font-family: [^;]*;/,"font-family: 'PT Sans', sans-serif;").html_safe %></p>
   </div>
-
   <%= tinymce_assets %>
   <%= tinymce %>
   <hr class="hr_settings "/>
-
   <% if @article.comments.any? %>
     <h3>Comments:</h2>
     <div><% @article.comments.each do |comment| %>
@@ -22,7 +20,6 @@
       <hr class="hr_settings "/>
     <% end %> 
   <% end %>
-
   <% if user_signed_in? %>
     <h4>Add a comment:</h3>
 

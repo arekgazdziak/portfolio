@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_filter :ensure_admin!, only: [:destroy, :edit] 
+  
   def edit
 
   end
