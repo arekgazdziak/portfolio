@@ -10,8 +10,8 @@
   <tr>
     <td><%= link_to "#{article.title}", article, :"data-no-turbolink" => true, :class => "article_title_list"  %></td>
     <% if current_user.try(:admin?) %>
-      <td><%= link_to "Edit", edit_article_path(article), :"data-no-turbolink" => true  %></td>
-      <td><%= link_to "Delete", article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to "Edit", edit_article_path(article), :"data-no-turbolink" => true, :class => "edit_delete_link" %></td>
+      <td><%= link_to "Delete", article, method: :delete, data: { confirm: 'Are you sure?' }, :class => "edit_delete_link" %></td>
     <% end %>
   </tr>
   <tr>

@@ -155,3 +155,27 @@ a.article_title_list:hover { text-decoration: none;
 	                          color: gray;
 	                          font-weight: bold;                       
 }
+
+a.edit_delete_link {text-decoration: none;
+                   color: black;
+                   font-weight: bold;
+}
+
+a.edit_delete_link:link {text-decoration: none;
+                   color: black;
+                   font-weight: bold;
+}
+a.edit_delete_link:visited {text-decoration: none;
+                   color: black;
+                   font-weight: bold;
+}
+
+a.edit_delete_link:active {text-decoration: none;
+                   color: black;
+                   font-weight: bold;
+}
+
+a.edit_delete_link:hover {text-decoration: none;
+                   color: gray;
+                   font-weight: bold;
+}

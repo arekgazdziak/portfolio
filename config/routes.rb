@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'blog' => 'articles#index', as: :blog
 
+  get 'portfolio' => 'portfolio#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
