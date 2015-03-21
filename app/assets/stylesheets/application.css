@@ -14,6 +14,9 @@
  *= require_self
  */
 
+/********************************************/
+/*                 Yahoo Pure               */
+/********************************************/
 
 /*!
 Pure v0.2.0
@@ -64,14 +67,27 @@ normalize.css v1.1.2 | MIT License | git.io/normalize
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 */
 
-html {display: table;
-	    margin: auto;
 
-} 
 .pure-table{border-collapse:collapse;border-spacing:0;empty-cells:show;border:1px solid #cbcbcb}.pure-table caption{color:#000;font:italic 85%/1 arial,sans-serif;padding:1em 0;text-align:center}.pure-table td,.pure-table th{border-left:1px solid #cbcbcb;border-width:0 0 0 1px;font-size:inherit;margin:0;overflow:visible;padding:6px 12px}.pure-table td:first-child,.pure-table th:first-child{border-left-width:0}.pure-table thead{background:#e0e0e0;color:#000;text-align:left;vertical-align:bottom;white-space:nowrap}.pure-table td{background-color:transparent}.pure-table-odd td{background-color:#f2f2f2}.pure-table-striped tr:nth-child(2n-1) td{background-color:#f2f2f2}.pure-table-bordered td{border-bottom:1px solid #cbcbcb}.pure-table-bordered tbody>tr:last-child td,.pure-table-horizontal tbody>tr:last-child td{border-bottom-width:0}.pure-table-horizontal td,.pure-table-horizontal th{border-width:0 0 1px;border-bottom:1px solid #cbcbcb}.pure-table-horizontal tbody>tr:last-child td{border-bottom-width:0}
+
 .pure-table-not-bordered{ border: 0px;}
 
-.text_margin {margin-top: 100px}
+
+* {-webkit-box-sizing: border-box; /* iOS <= 4 i Android <= 2.3 */
+   -moz-box-sizing: border-box; /* Firefox */
+   box-sizing: border-box; /* Chrome, Opera, Safari 5+ i IE 8+ */
+}
+
+*,
+:before,
+:after {
+box-sizing: border-box;
+}
+
+html {display: table;
+	    margin: auto;
+} 
+
 
 .hr_settings {color: #000; background-color: #000; height: 1px;}
 
@@ -92,10 +108,8 @@ float: left;
 }
 
 body {
-	    width: 1000px;
 	    vertical-align: middle;
       display: table-cell;
-
 }
 
 label:after {content: ":";}
@@ -132,6 +146,10 @@ body.mce-content-body {
     font-family: 'PT Sans';
     font-size: 12px;
 }
+
+/********************************************/
+/*                 ArticlesIndex            */
+/********************************************/
 
 a.article_title_list { font-size: 40px;
 }
@@ -179,3 +197,88 @@ a.edit_delete_link:hover {text-decoration: none;
                    color: gray;
                    font-weight: bold;
 }
+
+/*  Grid */
+
+.row { width: 100%;
+	     margin-top: 100px;
+}
+
+.col1-12 {width: 8.33%;
+
+}
+
+.col2-12 {width: 16.66%;
+
+}
+
+.col3-12 {width: 24.99%;
+
+}
+
+.col4-12 {width: 32.32%;
+
+}
+
+.col5-12 {width: 41.65%;
+
+}
+
+.col6-12 {width: 49.98%;
+
+}
+
+.col7-12 {width: 58.31%;
+
+}
+
+.col8-12 {width: 66.64%;
+
+}
+
+.col9-12 {width: 74.97%;
+
+}
+
+.col10-12 {width: 83.3%;
+
+}
+
+.col11-12 {width: 91.63%;
+
+}
+
+.col12-12 {width: 99.96%;
+
+}
+
+
+.feature-list
+{
+
+}
+  .feature-list h3 { color: #e97770 !important;
+
+  }
+
+    .feature-list h3:before
+    {
+    	position: relative;
+    	display: inline-block;
+    	color: #fff;
+    	background: #2f333b url('/images/overlay.png');
+    	border-radius: 1em;
+    	text-align: center;
+    }
+
+/* Container */
+
+.container { margin-left: auto;
+             margin-right: auto;
+             display: flex;
+}
+
+
+/********************************************/
+/*                 Portfolio                */
+/********************************************/
