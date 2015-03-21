@@ -84,7 +84,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 box-sizing: border-box;
 }
 
-html {display: table;
+html {
 	    margin: auto;
 } 
 
@@ -109,7 +109,7 @@ float: left;
 
 body {
 	    vertical-align: middle;
-      display: table-cell;
+      
 }
 
 label:after {content: ":";}
@@ -253,8 +253,8 @@ a.edit_delete_link:hover {text-decoration: none;
 }
 
 
-.feature-list
-{
+.new-article-form { width: 800px;
+	                  vertical-align: middle;
 
 }
   .feature-list h3 { color: #e97770 !important;
@@ -273,8 +273,8 @@ a.edit_delete_link:hover {text-decoration: none;
 
 /* Container */
 
-.container { margin-left: auto;
-             margin-right: auto;
+.container {margin-left: auto;
+            margin-right: auto;        
              display: flex;
 }
 

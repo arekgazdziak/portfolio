@@ -6,7 +6,7 @@
   </div>
 
   <div class="col8-12">
-  <div>
+  <div style="overflow: auto">
     <p><%= @article.text.gsub(/font-family: [^;]*;/,"font-family: 'PT Sans', sans-serif;").html_safe  %></p>
   </div>
   <%= tinymce_assets %>
@@ -29,16 +29,14 @@
   <% end %>
 
   <% if user_signed_in? %>
-  <h4>Add a comment:</h3>
+  <h4>Add a comment:</h4>
 
   <%= form_for [@article, @article.comments.build], html: { class: "pure-form" } do |f| %>
     <div class="field">
-
-    <p><%= f.text_field :commenter, value: current_user.email, readonly: true %></p>
+      <p><%= f.text_field :commenter, value: current_user.email, readonly: true %></p>
     </div>
     <div class="field">
-    
-    <p><%= f.text_area :body, class: "tinymce", :placeholder => "Comment" %></p>
+      <p><%= f.text_area :body, class: "tinymce", :placeholder => "Comment" %></p>
     </div>
     <%= f.submit class: "button-success button-secondary pure-button pure-button-primary" %>
   <% end %>
