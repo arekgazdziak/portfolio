@@ -1,9 +1,9 @@
 <% if @article != nil %>
-  <div class="container">
+  <div class="container row-top-margin">
     <div class="col2-12"></div>
     <div class="notice"><%= flash[:notice] %></div>
   </div>
-    
+
   <h1 align="center"><%= @article.title.html_safe %></h1>
 
   <div class="container">

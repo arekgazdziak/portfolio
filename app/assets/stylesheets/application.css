@@ -109,7 +109,7 @@ float: left;
 
 body {
 	    vertical-align: middle;
-      
+      	
 }
 
 label:after {content: ":";}
@@ -201,7 +201,9 @@ a.edit_delete_link:hover {text-decoration: none;
 /*  Grid */
 
 .row { width: 100%;
-	     margin-top: 100px;
+}
+
+.row-top-margin {		margin-top: 100px;
 }
 
 .col1-12 {width: 8.33%;
@@ -266,17 +268,31 @@ a.edit_delete_link:hover {text-decoration: none;
     	position: relative;
     	display: inline-block;
     	color: #fff;
-    	background: #2f333b url('/images/overlay.png');
+    	background: url('/images/overlay.png');
     	border-radius: 1em;
     	text-align: center;
     }
 
 /* Container */
 
-.container {margin-left: auto;
-            margin-right: auto;        
-             display: flex;
+.container {  margin-left: auto;
+              margin-right: auto;        
+              display: flex;
 }
+
+.portfolio-header { background: url('/assets/banner-1050738302cff433179e1f5ef75de3f7.jpg');
+                    margin-top: 35px;
+
+}
+  .portfolio-header h1 {    margin-top: 100px;
+  	                         color: white;
+                             text-align: center; 
+
+  }
+  .portfolio-header h2 {     color: white;
+                             text-align: center; 
+
+  }
 
 
 /********************************************/
