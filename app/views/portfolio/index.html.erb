@@ -74,6 +74,15 @@ Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.</div>
   <div class="col2-12"></div>      
 </div>
  -->
+
+ <div class="container" style="margin-top: 20px" >
+  <div class="col2-12"></div>
+  <div class="col8-12">  
+    <h2 align="center"><strong>Language skills</strong></h2>
+  </div>
+  <div class="col2-12"></div>      
+</div>
+
 <div class="container" style="margin-top: 20px; margin-bottom: 20px;" >
 <div class="col2-12">
 <div id="details0" style="visibility: hidden">C programming language</div>
@@ -83,7 +92,13 @@ Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.</div>
 <div id="details4" style="visibility: hidden">HTML</div>
 <div id="details5" style="visibility: hidden">Javascript</div>
 </div>
-<div class="col6-12">
+
+<div class="col4-12">Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.
+Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.
+Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.
+Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.
+Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.</div>
+<div class="col4-12" style="margin-top: 60px;">
 
  
 
@@ -96,7 +111,7 @@ Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.</div>
 
         function createChart() {
           var dataTable = google.visualization.arrayToDataTable([
-            ['Language', 'Level'],
+            ['', 'Level'],
             ['C', 4],
             ['Python',2.5],
             ['Ruby',3],
@@ -108,16 +123,16 @@ Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.</div>
           
 
           var chart = new google.charts.Bar(document.getElementById('chart'));
-          var options = {width: 600, height: 300,
+          var options = {width: 500, height: 250,
 
-            bars: 'horizontal',
+            bars: 'horizontal', axisTitlesPosition: 'none'
 
           };
           
           chart.draw(dataTable,options);
 
-                google.visualization.events.addListener(chart, 'onmouseover', showDetails);
-                google.visualization.events.addListener(chart, 'onmouseout', hideDetails);
+                // google.visualization.events.addListener(chart, 'onmouseover', showDetails);
+                // google.visualization.events.addListener(chart, 'onmouseout', hideDetails);
 
         }
 
@@ -163,4 +178,4 @@ Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.</div>
 
 
 </div>
-<div class="col4-12"></div>
+<div class="col2-12"></div>
