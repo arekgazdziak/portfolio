@@ -98,20 +98,20 @@ Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.Eget mattis at, 
 Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.
 Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.
 Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.</div>
-<div class="col4-12" style="margin-top: 60px;">
+<div class="col4-12" style="margin-top: 40px;">
 
  
 
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script type="text/javascript"> 
 
-    google.load('visualization','1.1',{'packages': ['bar']});
+    google.load('visualization','1.1',{'packages': ['barchart']});
 
     google.setOnLoadCallback (createChart);
 
         function createChart() {
           var dataTable = google.visualization.arrayToDataTable([
-            ['', 'Level'],
+            ['Language', 'Level'],
             ['C', 4],
             ['Python',2.5],
             ['Ruby',3],
@@ -122,10 +122,8 @@ Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.</div>
 
           
 
-          var chart = new google.charts.Bar(document.getElementById('chart'));
+          var chart = new google.visualization.BarChart(document.getElementById('chart'));
           var options = {width: 500, height: 250,
-
-            bars: 'horizontal', axisTitlesPosition: 'none'
 
           };
           
