@@ -20,6 +20,15 @@
       <li><a href="/articles/new" data-no-turbolink='true' >New article</a></li>
       <% end %>
       <li><a href="/portfolio" data-no-turbolink='true' >Portfolio</a></li>
+      <li class="pure-menu-item"> | </li>
+      <% if current_page?(controller: 'portfolio', action: 'index')%>
+        <li align="right"><a href="/portfolio#main" data-no-turbolink='true' >Main</a></li>
+        <li align="right"><a href="/portfolio#sheet" data-no-turbolink='true' >Timesheet</a></li>
+        <li align="right"><a href="/portfolio#main" data-no-turbolink='true' >Chart Area</a></li>
+        <li align="right"><a href="/portfolio#main" data-no-turbolink='true' >About me</a></li>
+        <li align="right"><a href="/portfolio#main" data-no-turbolink='true' >Contact</a></li>
+        <li class="pure-menu-item"> | </li>
+      <% end %>
       <% if !user_signed_in? %>
       <li align="right"><a href="/users/auth/google_oauth2" data-no-turbolink='true' >Log in</a></li>
       <!-- <li><a href="#" data-no-turbolink='true' >Edyta</a></li> -->
