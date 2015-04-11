@@ -4,14 +4,14 @@
   <link href="http://yui.yahooapis.com/combo?pure/0.2.0/base-min.css&pure/0.2.0/grids-min.css&pure/0.2.0/forms-min.css&pure/0.2.0/buttons-min.css&pure/0.2.0/menus-min.css&pure/0.2.0/tables-min.css" rel="stylesheet"></link>
   <title><%= @title %> | Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
-  <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
 <body>
-	<div class="pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+  	<div class="pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
 		<a href="/" data-no-turbolink='true' class="pure-menu-heading">Blog</a>
 		<ul>
 			<li><a href="/" data-no-turbolink='true' >Latest</a></li>
@@ -31,6 +31,7 @@
     </ul>
   </div>
   <div class="row">
+
 
   <%= yield %>
 
