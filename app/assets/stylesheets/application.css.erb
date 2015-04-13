@@ -78,6 +78,13 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
    box-sizing: border-box; /* Chrome, Opera, Safari 5+ i IE 8+ */
 }
 
+/* Overthrow CSS:
+   Enable overflow: auto on elements with overthrow class when html element has overthrow class too */
+.overthrow-enabled .overthrow {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
 *,
 :before,
 :after {
