@@ -8,8 +8,7 @@
  *
  * ========================================================== */
 html, body {
-    overflow:auto;
-
+    overflow: hidden;
     margin:0;
     padding:0;
 
@@ -125,7 +124,7 @@ html, body {
     left: 20px;
 }
 .pp-scrollable{
+ overflow: auto;
 
- overflow-y: scroll;
  height: 100%; 
 }
