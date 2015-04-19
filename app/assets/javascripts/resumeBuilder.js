@@ -37,8 +37,8 @@ function cycleItems() {
   item.css('display','inline-block');
 }
 
-$('.next').click(function() {
-  
+function nextSlide() {
+
 	removeDot();
 
   currentIndex += 1;
@@ -49,11 +49,9 @@ $('.next').click(function() {
 
   addDot();
 
-  cycleItems();
+}
 
-});
-
-$('.prev').click(function() {
+function prevSlide() {
 
 	removeDot();
   
@@ -65,6 +63,28 @@ $('.prev').click(function() {
   
   addDot();
 
+}
+
+$('.next').click(function() {
+  
+  nextSlide();
   cycleItems();
 
 });
+
+$('.prev').click(function() {
+
+  prevSlide();
+  cycleItems();
+
+});
+
+
+$('#arrow')
+    .mouseover(function() {
+        $(this).animate({height: 70}, 500);
+    })
+    .mouseout(function() {
+        $(this).animate({height: 50}, 500);
+    });
+
