@@ -17,7 +17,7 @@ var dots = $('.nav-dots span');
 
 
 
-cycleItems();
+
 
 function addDot() {
 
@@ -88,3 +88,12 @@ $('#arrow')
         $(this).animate({height: 50}, 500);
     });
 
+$('document').ready( function() {
+
+  if($('#main'))
+  {
+  	  console.log("arek");
+      cycleItems();      
+  }
+
+});
