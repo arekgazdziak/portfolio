@@ -1,13 +1,14 @@
 module PortfolioHelper
 
   
-  def add_skill(skill, note)
+  def add_skill(skill, note, link)
  
     raise "ArgumentError", 'Argument is higher than 6' unless note <= 6
     raise "ArgumentError", "Argument is not string" unless skill.is_a? String
     stars = star_note(note)
 
-    return "<h2 align=\"left\" style=\"color: white\"> #{stars} #{skill} </h2>"
+
+    return "<h2 align=\"left\" style=\"color: white\">#{stars} <span id=\"tools\"><a href=\"#{link}\">#{skill} </a></span></h2>"
 
   end
 
