@@ -18,12 +18,7 @@ $(document).ready(function() {
 var currentIndex = 0;
 var items = $('.portfolio-header');
 var itemAmt = items.length;
-
 var dots = $('.nav-dots span');
-
-
-
-
 
 function addDot() {
 
