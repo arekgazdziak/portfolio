@@ -1,6 +1,10 @@
 module PortfolioHelper
 
   
+  def add_contact(contact, link)
+   return "<a href=\"#{link}\">#{contact}</a>"
+  end
+
   def add_skill(skill, note, link)
  
     raise "ArgumentError", 'Argument is higher than 6' unless note <= 6
