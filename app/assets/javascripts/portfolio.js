@@ -64,6 +64,33 @@ function prevSlide() {
 
 }
 
+$('.nav-dot-firts').click(function() {
+ 
+  removeDot();
+  currentIndex = 0;
+  addDot();
+  cycleItems(); 
+  
+});
+
+$('.nav-dot-second').click(function() {
+ 
+  removeDot();
+  currentIndex = 1;
+  addDot();
+  cycleItems(); 
+  
+});
+
+$('.nav-dot-third').click(function() {
+ 
+  removeDot();
+  currentIndex = 2;
+  addDot();
+  cycleItems(); 
+  
+});
+
 $('.next').click(function() {
   
   nextSlide();
