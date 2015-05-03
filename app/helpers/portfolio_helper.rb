@@ -2,7 +2,7 @@ module PortfolioHelper
 
   
   def add_contact(contact, link)
-   return "<a href=\"#{link}\">#{contact}</a>"
+   return "<a href=\"#{link}\" target=\"_blank\">#{contact}</a>"
   end
 
   def add_skill(skill, note, link)
@@ -12,7 +12,7 @@ module PortfolioHelper
     stars = star_note(note)
 
 
-    return "<h2 align=\"left\" style=\"color: white\">#{stars} <span id=\"tools\"><a href=\"#{link}\">#{skill} </a></span></h2>"
+    return "<h2 align=\"left\" style=\"color: white\">#{stars} <span id=\"tools\"><a href=\"#{link}\" target=\"_blank\">#{skill} </a></span></h2>"
 
   end
 
