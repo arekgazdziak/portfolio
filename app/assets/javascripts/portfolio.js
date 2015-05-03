@@ -114,3 +114,19 @@ $(document).ready( function() {
   }
 
 });
+
+coded = "g5Yd1gXuXmgd@14gmi.HZ4";
+key = "QxEaMyCknlV8e4RHs52IXSj9ogNbWdDiK6YvfUpB3GLhwOZ1qAFu7m0ctrJPzT";
+shift = coded.length;
+link="";
+for (i=0; i<coded.length; i++) {
+  if (key.indexOf(coded.charAt(i))==-1) {
+    ltr = coded.charAt(i);
+    link += (ltr);
+  }
+  else {     
+    ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length;
+    link += (key.charAt(ltr));
+  }
+}
+$('.email').append("<a href='mailto:"+link+"'>"+link+"</a>");
